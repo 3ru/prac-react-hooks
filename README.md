@@ -2,5 +2,5 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/Ryuyxx/todo-react?style=for-the-badge)
 
 <h3 align="center">
-    Making ToDo app with **React**
+    Making ToDo app with React
 </h3>
