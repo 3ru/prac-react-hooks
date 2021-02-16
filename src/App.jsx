@@ -18,6 +18,24 @@ const App = () => {
     setFaceShowFlag(!faceShowFlag);
   };
 
+  const bodyStyle = {
+    textAlign: "center",
+    fontFamily: "arial black"
+  };
+  const buttonStyle = {
+    minWidth: "64",
+    lineHeight: "32px",
+    borderRadius: 4,
+    border: "none",
+    padding: "0px 24px",
+    color: "white",
+    background: "#eb6100",
+    cursor: "pointer",
+    margin: "6px 24px",
+    textAlign: "center",
+    fontWeight: "bold"
+  };
+
   // useEffectウィ使用することで、再レンダリング時に以下を無視させられる.
   // useEffect(() => {}, [ここ]);
   // アロー関数の第二引数に監視したい対象を入れることで、その値が変化した時のみ内部が実行される
@@ -36,20 +54,24 @@ const App = () => {
   }, [num]);
 
   return (
-    <>
+    <div style={bodyStyle}>
       {/* styleをダイレクトに与えることもできるstyle={{}} */}
-      <h1 style={{ color: "black" }}>こんにちは</h1>
+      <h1 style={{ color: "black" }}>REACT構文学習</h1>
       {/* コンポーネントはこのようにタグにして使用する。任意の引数を使用したり、
       タグで囲った中身を引数とすることもできる。 */}
-      <ColorfulMessage color="blue">お元気ですか?</ColorfulMessage>
-      <ColorfulMessage color="pink">元気です</ColorfulMessage>
-      <button onClick={onClickCountUp}>カウントアップ</button>
+      <ColorfulMessage color="#95E1D3">お元気ですか?</ColorfulMessage>
+      <ColorfulMessage color="#FF75A0">元気です</ColorfulMessage>
+      <button style={buttonStyle} onClick={onClickCountUp}>
+        CLICK !!
+      </button>
       <br />
-      <button onClick={onClickSwitchShowFlag}>On/Off</button>
+      <button style={buttonStyle} onClick={onClickSwitchShowFlag}>
+        On / Off
+      </button>
       <p>{num}</p>
       {/* アンパサンドを使用して、trueの時右を返す形で表示 */}
       {faceShowFlag && <p>( ・∇・)</p>}
-    </>
+    </div>
   );
 };
 

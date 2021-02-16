@@ -7,6 +7,7 @@ export const ColorfulMessage = (props) => {
   const { color, children } = props;
   // styleも変数にまとめ流ことができる。
   // color: color　のように、変数と同じ名前の場合省略できる
+  // キャメルケース
   const contentStyle = {
     color,
     fontSize: "20px"
